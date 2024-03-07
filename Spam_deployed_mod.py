@@ -16,7 +16,7 @@ def predict_spam(text, model):
 
 def main():
     st.title("Spam Classification")
-    model_path = "C:/Users/haris/Desktop/ML/Spam Classification/model"
+    model_path = "model"
     loaded_model = load_spam_model(model_path)
 
     text_input = st.text_input("Enter the Text").lower()
