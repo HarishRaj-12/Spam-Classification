@@ -4,7 +4,7 @@ import math
 from tensorflow.keras.models import load_model
 
 st.set_page_config(page_title="Spam Classification", page_icon=":tada:")
-
+@st.cache
 def load_spam_model(model_path):
     with st.spinner("Loading model..."):
         loaded_model = load_model(model_path)
