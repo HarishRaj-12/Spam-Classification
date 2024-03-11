@@ -4,12 +4,12 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 
 st.set_page_config(page_title="Spam Classification", page_icon=":tada:")
-options = tf.saved_model.LoadOptions(experimental_io_device='/job:localhost')
+# options = tf.saved_model.LoadOptions(experimental_io_device='/job:localhost')
 
 @st.cache
 def load_spam_model(model_path):
     with st.spinner("Loading model..."):
-        loaded_model = tf.saved_model.load("model/", options=options)
+        loaded_model = tf.saved_model.load("model/")
     return loaded_model
 
 def predict_spam(text, model):
