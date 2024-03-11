@@ -1,6 +1,6 @@
 import streamlit as st
 import tensorflow_text
-import math
+import tensorflow as tf
 from tensorflow.keras.models import load_model
 
 st.set_page_config(page_title="Spam Classification", page_icon=":tada:")
